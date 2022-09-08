@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    background: #e0e0e0;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background: #254de4;
+    color: #fff;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+---- NOTES ----
+flex default direction: ROW
+flex-direction: row|column;(row-reverse, column-reverse)
+
+If direction == ROW:
+- Main Axis = HORIZONTAL
+- Cross Axis = VERTICAL
+
+If direction == COLUMN:
+- Main Axis = VERTICAL
+- Cross Axis = HORIZONTAL
+
+alignment-props:
+- justify-content = MAIN AXIS
+- align-items = CROSS AXIS
+
+To align just 1 flex-item:
+- align-self on CROSS AXIS
+
+----------------------------
+
+flex-wrap: wrap|nowrap;
+
+If wrap == WRAP:
+- When it can't fit more items, it moves them to a new row/column without changing the items at all
+
+If wrap == NOWRAP:
+- When it can't fit more items, it's going to change the properties of items to make them fit
+
+----------------------------
+
+order: N
+
+It puts the item on the N place, so you can change the order of flex-items without changing the HTML
+
+----------------------------
+flex-basis: SIZE(100px)
+flex-grow: N
+
+flex-basis sets a default size of the flex-item
+flex-grows sets the growing factor of the flex-item based on the flex-basis of that flex-item
+
+flex-shrink:
+- Not used much, as it's kind of the oposite of flex-grow (just sets the shrinking factor of the element
+
+----------------------------
+
+To combine multiple properties you can write:
+
+flex: (grow) (shrink) (basis);
+Example:
+flex: 1 0 100px;
+
+If you just want the items to spread accross the screen at the same rate you can write:
+
+flex: 1; // translates to flex-grow: 1; flex-shrink: 0; flex-basis: 0;
+
+
+*/
